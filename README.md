@@ -12,7 +12,7 @@ The SDK is available as an npm with GitHub Packages.
 To install the SDK, in the same directory as your `package.json` file of your workspace, create or edit an `.npmrc` file to include following lines:
 ```
 @yzhou77:registry=https://npm.pkg.github.com 
-//npm.pkg.github.com/:_authToken=6f3e62f4e5920d8562ecb28bad37a9abd7936c86
+//npm.pkg.github.com/:_authToken=d3ada403d8b7792759beac17eb450525395b35b0
 ```
 
 Then install from the command line:
