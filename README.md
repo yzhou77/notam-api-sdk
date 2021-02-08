@@ -48,7 +48,7 @@ client.searchGeoJSON().withQueryParameters(params).execute()
 ```
 * Note: In `params` above you can just keep the parameters you want to search and delete others
 
-Simple example:
+#### Simple example:
 ```
 var sdk = require("@yzhou77/notam-api-sdk");
 var client = new sdk ();
@@ -81,7 +81,7 @@ var params = {
 };
 client.searchAixm().withQueryParameters(params).execute()
 ```
-Simple example:
+#### Simple example:
 ```
 var sdk = require("@yzhou77/notam-api-sdk");
 var client = new sdk ();
@@ -114,7 +114,7 @@ var params = {
 };
 client.searchAidap().withQueryParameters(params).execute()
 ```
-Simple example:
+#### Simple example:
 ```
 var sdk = require("@yzhou77/notam-api-sdk");
 var client = new sdk ();
