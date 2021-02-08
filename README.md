@@ -17,10 +17,15 @@ To install the SDK, in the same directory as your `package.json` file of your wo
 
 Then install from the command line:
 ```
-npm install @yzhou77/notam-api-sdk@2.0.4
+npm install @yzhou77/notam-api-sdk@2.0.5
 ```
 
-## Examples
+Or install via package.json:
+```
+"@yzhou77/notam-api-sdk": "2.0.5"
+```
+
+## Example Usage
 
 ### Get GeoJSON format NOTAMs with given parameters
 ```
