@@ -46,8 +46,15 @@ var params = {
 };
 client.searchGeoJSON().withQueryParameters(params).execute()
 ```
-* Note: In `params` above you can just keep the parameters you want to search and delete others. e.g. :
-```var params = { "pageSize": "10", "pageNum": "3"};```
+* Note: In `params` above you can just keep the parameters you want to search and delete others
+
+Simple example:
+```
+var sdk = require("@yzhou77/notam-api-sdk");
+var client = new sdk ();
+var params = { "pageSize": "10", "pageNum": "3"};
+client.searchGeoJSON().withQueryParameters(params).execute()
+```
 
 
 ### Get AIXM 5.1 format NOTAMs with given parameters.
@@ -74,8 +81,14 @@ var params = {
 };
 client.searchAixm().withQueryParameters(params).execute()
 ```
-* Note: In `params` above you can just keep the parameters you want to search and delete others. e.g. :
-```var params = { "pageSize": "10", "pageNum": "3"};```
+Simple example:
+```
+var sdk = require("@yzhou77/notam-api-sdk");
+var client = new sdk ();
+var params = { "pageSize": "10", "pageNum": "3"};
+client.searchAixm().withQueryParameters(params).execute()
+```
+
 
 ### Get AIDAP format NOTAMs with given parameters.
 ```
@@ -101,5 +114,10 @@ var params = {
 };
 client.searchAidap().withQueryParameters(params).execute()
 ```
-* Note: In `params` above you can just keep the parameters you want to search and delete others. e.g. :
-```var params = { "pageSize": "10", "pageNum": "3"};```
+Simple example:
+```
+var sdk = require("@yzhou77/notam-api-sdk");
+var client = new sdk ();
+var params = { "pageSize": "10", "pageNum": "3"};
+client.searchAidap().withQueryParameters(params).execute()
+```
