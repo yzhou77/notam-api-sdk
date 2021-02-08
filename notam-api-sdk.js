@@ -33,7 +33,7 @@ class NotamApiSdk{
     }
 
     searchAidap(){
-        return new SearcAidap(this.hostName)
+        return new SearchAidap(this.hostName)
     }
 }
 
