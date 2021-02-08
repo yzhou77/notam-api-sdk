@@ -8,16 +8,24 @@ This SDK makes using the NOTAM Search API easy. It handels GET HTTP requests wit
 
 ## Install
 
-The SDK is available as an npm package. Install in your workspace with:
+The SDK is available as an npm with GitHub Packages. 
+To install the SDK, in the same directory as your `package.json` file of your workspace, create or edit an `.npmrc` file to include following lines:
 ```
-npm install --save notam-api-sdk
+@yzhou77:registry=https://npm.pkg.github.com 
+//npm.pkg.github.com/:_authToken=6f3e62f4e5920d8562ecb28bad37a9abd7936c86
+```
+
+Then install from the command line:
+```
+npm install @yzhou77/notam-api-sdk@1.0.1
 ```
 
 ## Examples
 
 ### Get GeoJSON format NOTAMs with given parameters
 ```
-var sdk = require("notam-api-sdk");
+var sdk = require("@yzhou77/notam-api-sdk");
+var client = new sdk ();
 var params = { 
     "icaoLocation": "your_icaoLocation",
     "domesticLocation": "your_domesticLocation",
@@ -36,21 +44,16 @@ var params = {
     "pageSize": "your_pageSize",
     "pageNum": "your_pageNum"
 };
+client.searchGeoJSON().withQueryParameters(params).execute()
 
 // In `params` above you can just keep the parameters you want to search and delete others. e.g. :
 // var params = { "pageSize": "10", "pageNum": "3"};
 
-
-var client = new sdk ();
-client.searchGeoJSON().withQueryParameters(params).(execute().then(response => {
-        console.log(JSON.stringify(response));
-    }, err => {
-        throw err;
-    });
 ```
 ### Get AIXM 5.1 format NOTAMs with given parameters.
 ```
-var sdk = require("notam-api-sdk");
+var sdk = require("@yzhou77/notam-api-sdk");
+var client = new sdk ();
 var params = { 
     "icaoLocation": "your_icaoLocation",
     "domesticLocation": "your_domesticLocation",
@@ -69,22 +72,16 @@ var params = {
     "pageSize": "your_pageSize",
     "pageNum": "your_pageNum"
 };
+client.searchAixm().withQueryParameters(params).execute()
 
 // In `params` above you can just keep the parameters you want to search and delete others. e.g. :
 // var params = { "pageSize": "10", "pageNum": "3"};
-
-
-var client = new sdk ();
-client.searchAixm().withQueryParameters(params).(execute().then(response => {
-        console.log(JSON.stringify(response));
-    }, err => {
-        throw err;
-    });
 ```
 
 ### Get AIDAP format NOTAMs with given parameters.
 ```
-var sdk = require("notam-api-sdk");
+var sdk = require("@yzhou77/notam-api-sdk");
+var client = new sdk ();
 var params = { 
     "icaoLocation": "your_icaoLocation",
     "domesticLocation": "your_domesticLocation",
@@ -103,15 +100,7 @@ var params = {
     "pageSize": "your_pageSize",
     "pageNum": "your_pageNum"
 };
+client.searchAidap().withQueryParameters(params).execute()
 
 // In `params` above you can just keep the parameters you want to search and delete others. e.g. :
 // var params = { "pageSize": "10", "pageNum": "3"};
-
-
-var client = new sdk ();
-client.searchAidap().withQueryParameters(params).(execute().then(response => {
-        console.log(JSON.stringify(response));
-    }, err => {
-        throw err;
-    });
-```

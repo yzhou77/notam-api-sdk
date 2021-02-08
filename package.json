@@ -1,6 +1,6 @@
 {
-  "name": "notam-api-sdk",
-  "version": "1.0.0",
+  "name": "@yzhou77/notam-api-sdk",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {

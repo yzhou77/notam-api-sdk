@@ -1,8 +1,8 @@
 "use strict";
 
-var SearchGeoJSON = require("./lib/searchgeojson")
-var SearchAixm = require("./lib/searchaixm")
-var SearchAidap = require("./lib/searchaidap")
+var SearchGeoJSON = require("./lib/searchgeojson.js");
+var SearchAixm = require("./lib/searchaixm.js");
+var SearchAidap = require("./lib/searchaidap.js");
 
 const _hostName = new WeakMap();
 
@@ -33,7 +33,7 @@ class NotamApiSdk{
     }
 
     searchAidap(){
-        return new SearcAidap(this.hostName)
+        return new SearchAidap(this.hostName)
     }
 }
 
