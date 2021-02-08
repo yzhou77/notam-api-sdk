@@ -17,7 +17,7 @@ To install the SDK, in the same directory as your `package.json` file of your wo
 
 Then install from the command line:
 ```
-npm install @yzhou77/notam-api-sdk@2.0.0
+npm install @yzhou77/notam-api-sdk@2.0.4
 ```
 
 ## Examples
@@ -25,7 +25,7 @@ npm install @yzhou77/notam-api-sdk@2.0.0
 ### Get GeoJSON format NOTAMs with given parameters
 ```
 var sdk = require("@yzhou77/notam-api-sdk");
-var client = new sdk ();
+var client = new sdk ("http://localhost:3000"); // API host port
 var params = { 
     "icaoLocation": "your_icaoLocation",
     "domesticLocation": "your_domesticLocation",
@@ -51,7 +51,7 @@ client.searchGeoJSON().withQueryParameters(params).execute()
 #### Simple example:
 ```
 var sdk = require("@yzhou77/notam-api-sdk");
-var client = new sdk ();
+var client = new sdk ("http://localhost:3000");
 var params = { "pageSize": "10", "pageNum": "3"};
 client.searchGeoJSON().withQueryParameters(params).execute()
 ```
@@ -60,7 +60,7 @@ client.searchGeoJSON().withQueryParameters(params).execute()
 ### Get AIXM 5.1 format NOTAMs with given parameters.
 ```
 var sdk = require("@yzhou77/notam-api-sdk");
-var client = new sdk ();
+var client = new sdk ("http://localhost:3000"); // API host port
 var params = { 
     "icaoLocation": "your_icaoLocation",
     "domesticLocation": "your_domesticLocation",
@@ -84,7 +84,7 @@ client.searchAixm().withQueryParameters(params).execute()
 #### Simple example:
 ```
 var sdk = require("@yzhou77/notam-api-sdk");
-var client = new sdk ();
+var client = new sdk ("http://localhost:3000"); 
 var params = { "pageSize": "10", "pageNum": "3"};
 client.searchAixm().withQueryParameters(params).execute()
 ```
@@ -93,7 +93,7 @@ client.searchAixm().withQueryParameters(params).execute()
 ### Get AIDAP format NOTAMs with given parameters.
 ```
 var sdk = require("@yzhou77/notam-api-sdk");
-var client = new sdk ();
+var client = new sdk ("http://localhost:3000"); // API host port
 var params = { 
     "icaoLocation": "your_icaoLocation",
     "domesticLocation": "your_domesticLocation",
@@ -117,7 +117,7 @@ client.searchAidap().withQueryParameters(params).execute()
 #### Simple example:
 ```
 var sdk = require("@yzhou77/notam-api-sdk");
-var client = new sdk ();
+var client = new sdk ("http://localhost:3000");
 var params = { "pageSize": "10", "pageNum": "3"};
 client.searchAidap().withQueryParameters(params).execute()
 ```
