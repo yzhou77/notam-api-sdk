@@ -17,7 +17,7 @@ To install the SDK, in the same directory as your `package.json` file of your wo
 
 Then install from the command line:
 ```
-npm install @yzhou77/notam-api-sdk@1.0.1
+npm install @yzhou77/notam-api-sdk@2.0.0
 ```
 
 ## Examples
@@ -45,11 +45,11 @@ var params = {
     "pageNum": "your_pageNum"
 };
 client.searchGeoJSON().withQueryParameters(params).execute()
-
-// In `params` above you can just keep the parameters you want to search and delete others. e.g. :
-// var params = { "pageSize": "10", "pageNum": "3"};
-
 ```
+* Note: In `params` above you can just keep the parameters you want to search and delete others. e.g. :
+```var params = { "pageSize": "10", "pageNum": "3"};```
+
+
 ### Get AIXM 5.1 format NOTAMs with given parameters.
 ```
 var sdk = require("@yzhou77/notam-api-sdk");
@@ -73,10 +73,9 @@ var params = {
     "pageNum": "your_pageNum"
 };
 client.searchAixm().withQueryParameters(params).execute()
-
-// In `params` above you can just keep the parameters you want to search and delete others. e.g. :
-// var params = { "pageSize": "10", "pageNum": "3"};
 ```
+* Note: In `params` above you can just keep the parameters you want to search and delete others. e.g. :
+```var params = { "pageSize": "10", "pageNum": "3"};```
 
 ### Get AIDAP format NOTAMs with given parameters.
 ```
@@ -101,6 +100,6 @@ var params = {
     "pageNum": "your_pageNum"
 };
 client.searchAidap().withQueryParameters(params).execute()
-
-// In `params` above you can just keep the parameters you want to search and delete others. e.g. :
-// var params = { "pageSize": "10", "pageNum": "3"};
+```
+* Note: In `params` above you can just keep the parameters you want to search and delete others. e.g. :
+```var params = { "pageSize": "10", "pageNum": "3"};```
