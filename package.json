@@ -1,0 +1,19 @@
+{
+  "name": "notam-api-sdk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yzhou77/notam-api-sdk.git"
+  },
+  "author": "yzhou77",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yzhou77/notam-api-sdk/issues"
+  },
+  "homepage": "https://github.com/yzhou77/notam-api-sdk#readme"
+}
