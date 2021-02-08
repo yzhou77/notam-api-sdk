@@ -42,7 +42,7 @@ var params = {
 
 
 var client = new sdk ();
-client.searchGeoJSON().withQueryParameters(params).(execute().then(response => {
+client.searchGeoJSON().withQueryParameters(params).execute().then(response => {
         console.log(JSON.stringify(response));
     }, err => {
         throw err;
@@ -75,7 +75,7 @@ var params = {
 
 
 var client = new sdk ();
-client.searchAixm().withQueryParameters(params).(execute().then(response => {
+client.searchAixm().withQueryParameters(params).execute().then(response => {
         console.log(JSON.stringify(response));
     }, err => {
         throw err;
@@ -109,7 +109,7 @@ var params = {
 
 
 var client = new sdk ();
-client.searchAidap().withQueryParameters(params).(execute().then(response => {
+client.searchAidap().withQueryParameters(params).execute().then(response => {
         console.log(JSON.stringify(response));
     }, err => {
         throw err;
